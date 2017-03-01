@@ -1,4 +1,4 @@
-require './queue.rb'
+require_relative '../../data_structures/queue.rb'
 
 begin
 print 'Enter N: '

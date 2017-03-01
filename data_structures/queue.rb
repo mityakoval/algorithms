@@ -3,7 +3,7 @@ class CQueue
 
   def initialize(n = 0)
     @elems = Array.new
-    n.times.with_index { |i| self.enqueue i+1 }
+    n.times.with_index { |i| self.enqueue i }
   end
 
   def dequeue
