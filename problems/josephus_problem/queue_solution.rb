@@ -23,7 +23,7 @@ while !q.empty?
     q.enqueue(q.dequeue)
   end
   puts "#{q.dequeue}"
-  puts "Remaining people: #{q.elements}"
+  puts "Remaining people: #{q}"
   i += 1
 end
 
