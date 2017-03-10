@@ -31,7 +31,7 @@ class Percolation
     @grid[row][col].is_open?
   end
 
-  def is_open?(row, col)
+  def is_full?(row, col)
     @grid[row][col].is_full?
   end
 
