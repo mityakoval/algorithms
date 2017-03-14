@@ -1,6 +1,13 @@
-require '../weighted_quick_union.rb'
-require '../quick_union.rb'
-require './site.rb'
+require_relative '../weighted_quick_union_pc.rb'
+require_relative '../quick_union.rb'
+require_relative './site.rb'
+
+#
+# Implementation of percolation system
+#
+# @author Mitya Koval
+# @attr_reader [Array<Integer>] amount of open sites in the percolation system
+#
 class Percolation
   attr_reader :open_sites
 
@@ -9,7 +16,7 @@ class Percolation
     @open_sites = 0
     @virtual_top_id = n*n
     @virtual_bottom_id = n*n + 1
-    @wqu = WeightedQuickUnion.new(n*n + 2)
+    @wqu = WeightedQuickUnionPc.new(n*n + 2)
     n.times.with_index do |i| # connect top and bottom rows of the grid to the virtual sites
       @wqu.union(i, @virtual_top_id) # connect grid[0][i] to virtual top site (i < n)
       @wqu.union((n*n - n + i), @virtual_bottom_id) # connect grid[n-1][i] to virtual bottom site (i < n)

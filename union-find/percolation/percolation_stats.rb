@@ -1,4 +1,5 @@
 require_relative './percolation.rb'
+require 'ruby-progressbar'
 
 class Time
   def to_ms
@@ -13,14 +14,15 @@ class PercolationStats
     @threshholds = []
     print "Running Monte Carlo experiment\n"
     start = Time.now
-    trials.times do |t|
+    bar = ProgressBar.create(:format => '%t: |%B| %p%%', total: trials, length: 80)
+    trials.times.with_index do |t, i|
       mc = Percolation.new(n)
       while !mc.percolates?
         mc.open(rand(n), rand(n))
       end
       threshhold = mc.open_sites / (n*n).to_f
       @threshholds << threshhold
-      print "."
+      bar.increment
     end
     print "\n"
     finish = Time.now
@@ -39,7 +41,7 @@ class PercolationStats
     @stddev = 0
     @threshholds.each { |t| @stddev += (t - @mean)*(t - @mean) }
     @stddev /= @t - 1
-    @stddev = @stddev.round(12)
+    @stddev = @stddev
   end
 
   def confidence_interval
