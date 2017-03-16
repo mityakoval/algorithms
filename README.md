@@ -22,7 +22,7 @@
 - [Josephus problem](https://en.wikipedia.org/wiki/Josephus_problem "Wikipedia - Josephus problem")
   + [Queue implementation](https://github.com/mityakoval/algorithms/blob/master/problems/josephus_problem/queue_solution.rb "problems/josephus_prolem/queue_solution.rb")
 - [Percolation](https://github.com/mityakoval/algorithms/blob/master/union-find/percolation/percolation.rb "union-find/percolation/percolation.rb")
-    + ['Monte Carlo' Experiment](https://github.com/mityakoval/algorithms/blob/master/union-find/percolation/percolation_stats.rb "union-find/percolation/percolation_stats.rb")
+    + ['Monte Carlo' simulation](https://github.com/mityakoval/algorithms/blob/master/union-find/percolation/percolation_stats.rb "union-find/percolation/percolation_stats.rb")
     + [Percolation statistics](https://github.com/mityakoval/algorithms/blob/master/union-find/percolation/percolation_stats.rb "union-find/percolation/percolation_stats.rb")
 
 

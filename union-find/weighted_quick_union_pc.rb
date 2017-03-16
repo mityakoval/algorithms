@@ -8,7 +8,8 @@ require_relative './weighted_quick_union.rb'
 #
 class WeightedQuickUnionPc < WeightedQuickUnion
 
-  #
+  private
+  # @private
   # Seeks the root of the `i-th` node and flattens the tree that contains `i-th` node
   # @param i [Integer] node
   #
