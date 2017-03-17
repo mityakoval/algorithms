@@ -1,4 +1,4 @@
-require_relative 'percolation/percolation_stats.rb'
+require_relative 'percolation/percolation_stats_jruby.rb'
 
 n = ARGV[0].to_i
 trials = ARGV[1].to_i

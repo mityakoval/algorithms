@@ -1,4 +1,4 @@
-require_relative './percolation.rb'
+require_relative './percolation_mri.rb'
 # require 'ruby-progressbar'
 
 class Time
