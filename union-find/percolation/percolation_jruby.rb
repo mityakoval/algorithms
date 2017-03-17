@@ -1,7 +1,7 @@
-include Java
+# include Java
 require_relative '../weighted_quick_union_pc.rb'
 require_relative './site.rb'
-require '/usr/local/algs4/algs4.jar' # change to your path to algs.jar
+# require '/Users/mityakoval/Desktop/algs4.jar' # change to your path to algs.jar
 
 #
 # Implementation of percolation system
@@ -23,8 +23,8 @@ class Percolation
     @open_sites = 0
     @virtual_top_id = n*n
     @virtual_bottom_id = n*n + 1
-    # @wqu = WeightedQuickUnion.new(n*n + 2) # add two additional indeces for virtual sites
-    @wqu = Java::edu.princeton.cs.algs4.WeightedQuickUnionUF.new(n*n+2)
+    @wqu = WeightedQuickUnion.new(n*n + 2) # add two additional indeces for virtual sites
+    # @wqu = Java::edu.princeton.cs.algs4.WeightedQuickUnionUF.new(n*n+2)
     n.times.with_index do |i| # connect top and bottom rows of the grid to the virtual sites
       @wqu.union(i, @virtual_top_id) # connect grid[0][i] to virtual top site (i < n)
       @wqu.union((n*n - n + i), @virtual_bottom_id) # connect grid[n-1][i] to virtual bottom site (i < n)
